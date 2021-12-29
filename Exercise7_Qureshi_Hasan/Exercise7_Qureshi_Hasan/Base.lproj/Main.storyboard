@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Us6-js-h7a">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise7_Qureshi_Hasan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iUP-eT-toP">
+                                <rect key="frame" x="35.666666666666657" y="233" width="343" height="270"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-Na-tjh">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="WYh-rt-AYj"/>
+                                            <constraint firstAttribute="height" constant="31" id="e7c-nx-Sx4"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Orignal"/>
+                                            <segment title="Blur"/>
+                                            <segment title="Sepia"/>
+                                            <segment title="Vintage"/>
+                                            <segment title="Noir"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="filterImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="WKy-bx-Ts3"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houston" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-G2-tMK">
+                                        <rect key="frame" x="46.333333333333343" y="56" width="250.00000000000003" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="7w5-OM-Yt0"/>
+                                            <constraint firstAttribute="width" constant="250" id="ZM2-ly-mPf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9r-T0-Ysv">
+                                        <rect key="frame" x="0.0" y="231" width="343" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SP4-FI-64y">
+                                                <rect key="frame" x="0.0" y="0.0" width="163" height="39"/>
+                                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="5dg-L1-PJU"/>
+                                                    <constraint firstAttribute="width" constant="163" id="Rg6-96-cRP"/>
+                                                </constraints>
+                                                <state key="normal" image="photo.fill.on.rectangle.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Nd-u7-DDs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G61-V3-E01">
+                                                <rect key="frame" x="180" y="0.0" width="163" height="39"/>
+                                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="163" id="RQx-RQ-NNP"/>
+                                                    <constraint firstAttribute="height" constant="39" id="ZRT-GS-QUM"/>
+                                                </constraints>
+                                                <state key="normal" image="square.and.arrow.down.on.square.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqA-Ku-RwZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iUP-eT-toP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hsQ-Qs-3Pp"/>
+                            <constraint firstItem="iUP-eT-toP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yYj-b8-Th0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fXf-6h-PJW"/>
+                    <connections>
+                        <outlet property="imageView" destination="Xt8-G2-tMK" id="KZm-nA-scb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874.39999999999998" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OXy-Gc-69R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Us6-js-h7a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xYr-Bp-JIu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7F9-pC-ru2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYP-wU-6CY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64.799999999999997" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="houston" width="1200" height="694"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="97"/>
+        <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
